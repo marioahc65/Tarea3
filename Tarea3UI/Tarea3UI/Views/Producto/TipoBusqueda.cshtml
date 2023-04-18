@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "TipoBusqueda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Escoja el tipo para Verificar Producto</h1>
+    <div class="container">
+        <div class="row" style="margin-top: 5rem">
+            <div class="col">
+                <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="@("window.location.href='" + @Url.Action("Index", "Producto") + "'");">Ver Lista de Inventario</button>
+            </div>
+            <div class="col">
+                <div class="card-body">
+                    <form asp-action="Details" asp-controller="Producto" method="get">
+                        <div class="mb-2">
+                            <label class="form-label">Ingresar Número de Lote</label>
+                            <input type="text" class="form-control form-control-sm" required name="id" />
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block">Validar por Numero de Lote</button>
+                    </form>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

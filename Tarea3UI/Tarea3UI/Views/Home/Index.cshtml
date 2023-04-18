@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido al sistema</h1>
+    <div class="container">
+        <div class="row" style="margin-top: 5rem">
+            <div class="col">
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="@("window.location.href='" + @Url.Action("Create", "Producto") + "'");">Registrar</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="@("window.location.href='" + @Url.Action("TipoBusqueda", "Producto") + "'");">Verificar</button>
+            </div>
+        </div>
+    </div>
+</div>
